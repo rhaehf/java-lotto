@@ -1,5 +1,6 @@
 package controller;
 
+import service.WinningNumber;
 import service.InputValidation;
 import service.LottoNumber;
 import view.Input;
@@ -11,6 +12,7 @@ public class GameController {
     public void play() {
         buyLotto();
         publishLotto();
+        inputWinningNumber();
     }
 
     private void buyLotto() {
@@ -28,5 +30,11 @@ public class GameController {
         }
 
         Output.lottoNumbers();
+    }
+
+    private void inputWinningNumber() {
+        String inputNumber = Input.winningNumber();
+        WinningNumber winningNumber = new WinningNumber();
+        winningNumber.split(inputNumber);
     }
 }

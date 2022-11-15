@@ -6,12 +6,14 @@ public class Input {
     // 구입금액 입력
     public static String purchaseAmount() {
         System.out.println("구입금액을 입력해 주세요.");
-        String inputMoney = Console.readLine();
-        System.out.println(" ");
-        return inputMoney;
+        return Console.readLine();
     }
 
     // 당첨 번호 입력
+    public static String winningNumber() {
+        System.out.println("\n" + "당첨 번호를 입력해 주세요.");
+        return Console.readLine();
+    }
 
     // 보너스 번호 입력
 
