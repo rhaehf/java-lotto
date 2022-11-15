@@ -1,5 +1,6 @@
 package controller;
 
+import service.BonusNumber;
 import service.WinningNumber;
 import service.InputValidation;
 import service.LottoNumber;
@@ -13,6 +14,7 @@ public class GameController {
         buyLotto();
         publishLotto();
         inputWinningNumber();
+        inputBonusNumber();
     }
 
     private void buyLotto() {
@@ -36,5 +38,11 @@ public class GameController {
         String inputNumber = Input.winningNumber();
         WinningNumber winningNumber = new WinningNumber();
         winningNumber.split(inputNumber);
+    }
+
+    private void inputBonusNumber() {
+        String inputNumber = Input.bonusNumber();
+        BonusNumber bonusNumber = new BonusNumber();
+        bonusNumber.store(inputNumber);
     }
 }
