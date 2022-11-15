@@ -1,5 +1,6 @@
 package service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -11,5 +12,9 @@ public class WinningNumber {
     public void split(String inputNumber) {
         int[] numbers = Stream.of(inputNumber.split(",")).mapToInt(Integer::parseInt).toArray();
         winningNumbers = Arrays.stream(numbers).boxed().collect(Collectors.toList());
+    }
+
+    public static List<Integer> getWinningNumbers() {
+        return winningNumbers;
     }
 }

@@ -6,4 +6,8 @@ public class BonusNumber {
     public void store(String inputNumber) {
         bonusNumber = Integer.parseInt(inputNumber.strip());
     }
+
+    public static int getBonusNumber() {
+        return bonusNumber;
+    }
 }
