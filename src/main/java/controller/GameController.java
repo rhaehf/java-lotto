@@ -31,7 +31,7 @@ public class GameController {
             lottoNumber.makeNumbers();
         }
 
-        Output.lottoNumbers();
+        Output.lottoNumbers(lottoNumber.getLottoNumbers());
     }
 
     private void inputWinningNumber() {

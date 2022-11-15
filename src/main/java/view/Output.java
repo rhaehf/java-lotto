@@ -1,6 +1,6 @@
 package view;
 
-import service.LottoNumber;
+import java.util.List;
 
 public class Output {
     // 구매 개수 출력
@@ -9,8 +9,8 @@ public class Output {
     }
 
     // 구매한 로또 번호 출력
-    public static void lottoNumbers(){
-        LottoNumber.lottoNumbers.forEach(
+    public static void lottoNumbers(List<List<Integer>> lottoNumbers) {
+        lottoNumbers.forEach(
                 System.out::println
         );
     }
