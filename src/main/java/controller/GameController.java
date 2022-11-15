@@ -10,6 +10,7 @@ public class GameController {
     public static int lottoCount;
     public static List<Integer> matchWinningNumbersCount;
     public static List<Integer> matchBonusNumbersCount;
+    public static List<Integer> matchResult;
 
     private final LottoNumber lottoNumber;
     private final WinningNumber winningNumber;
@@ -29,6 +30,7 @@ public class GameController {
         inputWinningNumber();
         inputBonusNumber();
         matchLotto();
+        outputResults();
     }
 
     private void buyLotto() {
@@ -58,7 +60,14 @@ public class GameController {
     }
 
     private void matchLotto() {
-        matchWinningNumbersCount = compareNumber.matchWinning(lottoCount, lottoNumber, winningNumber);
-        matchBonusNumbersCount = compareNumber.matchBonus(lottoCount, lottoNumber, bonusNumber);
+        compareNumber.matchWinning(lottoCount, lottoNumber, winningNumber);
+        compareNumber.matchBonus(lottoCount, lottoNumber, bonusNumber);
+        matchResult = compareNumber.matchResults(lottoCount);
+//        System.out.println(matchResult);
+    }
+
+    private void outputResults() {
+        Output.lottoMatch(matchResult);
+
     }
 }

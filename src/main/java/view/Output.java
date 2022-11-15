@@ -16,7 +16,16 @@ public class Output {
     }
 
     // 당첨 결과 출력
+    public static void lottoMatch(List<Integer> matchResult){
+        System.out.println("\n" + "당첨 통계" + "\n" + "---");
+        System.out.printf("6개 일치 (2,000,000,000원) - %s개", matchResult.get(0));
+        System.out.printf("\n" + "5개 일치, 보너스 볼 일치 (30,000,000원) - %s개", matchResult.get(1));
+        System.out.printf("\n" + "5개 일치 (1,500,000원) - %s개", matchResult.get(2));
+        System.out.printf("\n" + "4개 일치 (50,000원) - %s개", matchResult.get(3));
+        System.out.printf("\n" + "3개 일치 (5,000원) - %s개", matchResult.get(4));
+    }
 
     // 수익률 출력
-
+    public static void lottoEarning(){
+    }
 }
