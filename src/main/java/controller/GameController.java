@@ -26,6 +26,7 @@ public class GameController {
         for (int i = 0; i < lottoCount; i++) {
             lottoNumber.makeNumbers();
         }
-        System.out.println(LottoNumber.lottoNumbers);
+
+        Output.lottoNumbers();
     }
 }
